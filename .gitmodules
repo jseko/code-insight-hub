@@ -1,3 +1,0 @@
-[submodule "vendors/rancher"]
-	path = vendors/rancher
-	url = git@github.com:rancher/rancher.git
