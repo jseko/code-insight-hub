@@ -1,0 +1,3 @@
+[submodule "vendors/HAMi"]
+	path = vendors/HAMi
+	url = git@github.com:Project-HAMi/HAMi.git
