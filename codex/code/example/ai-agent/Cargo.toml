@@ -1,0 +1,34 @@
+# 基础包配置
+[package]
+name = "simple-ai-agent"    # 项目名称
+version = "0.1.0"           # 版本号
+edition = "2021"            # Rust 版本
+
+# 库配置（用于集成测试）
+[lib]
+name = "simple_ai_agent"
+path = "src/lib.rs"
+
+# 运行时依赖
+[dependencies]
+tokio = { version = "1.35", features = ["full"] }         # 异步运行时
+serde = { version = "1.0", features = ["derive"] }       # 序列化/反序列化
+serde_json = "1.0"                                      # JSON 支持
+async-trait = "0.1"                                      # 异步 trait 支持
+reqwest = { version = "0.11", features = ["json", "stream"] }  # HTTP 客户端
+futures = "0.3"                                          # 异步工具库
+async-stream = "0.3"                                      # 异步流支持
+bytes = "1.5"                                            # 字节处理
+tracing = "0.1"                                          # 日志追踪
+tracing-subscriber = "0.3"                               # 日志订阅器
+anyhow = "1.0"                                           # 错误处理
+thiserror = "1.0"                                        # 错误类型派生
+dashmap = "5.5"                                          # 并发哈希映射
+uuid = { version = "1.6", features = ["v4", "serde"] }  # UUID 生成
+tokio-util = "0.7"                                       # Tokio 工具
+chrono = "0.4"                                           # 时间处理
+dotenv = "0.15"                                          # 环境变量加载
+
+# 开发依赖
+[dev-dependencies]
+tokio-test = "0.4"                                       # 异步测试工具
